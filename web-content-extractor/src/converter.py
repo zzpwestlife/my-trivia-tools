@@ -14,8 +14,13 @@ class Converter:
             # Add metadata
             final_markdown = f"# {title}\n\n{markdown}"
             
-            # Post-processing: Remove excessive blank lines
-            final_markdown = "\n".join([line for line in final_markdown.splitlines() if line.strip() != ""])
+            # Post-processing: Collapse multiple blank lines into one (max 2 newlines)
+            import re
+            final_markdown = re.sub(r'\n{3,}', '\n\n', final_markdown)
+            
+            # Ensure horizontal rules have blank lines around them
+            final_markdown = re.sub(r'([^\n])\n---', r'\1\n\n---', final_markdown)
+            final_markdown = re.sub(r'---\n([^\n])', r'---\n\n\1', final_markdown)
             
             # Ensure code blocks have language hints if possible (readability usually strips this)
             # We can't easily guess language without more complex logic.

@@ -1,2 +1,8 @@
 /web-content-extractor/src/__pycache__
 /web-content-extractor/tests/__pycache__
+__pycache__/
+*.pyc
+.DS_Store
+web-content-extractor/output/
+web-content-extractor/test_output/
+auto-url/

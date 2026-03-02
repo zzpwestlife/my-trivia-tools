@@ -42,6 +42,9 @@ class Fetcher:
                         
                     except Exception as e:
                         logger.warning(f"X.com specific wait failed: {e}")
+                elif "appmsgalbum" in url:
+                    logger.info("Detected WeChat Album URL, applying deep scroll logic...")
+                    self._auto_scroll(page, max_scrolls=100)
                 else:
                     self._auto_scroll(page)
                 
@@ -106,25 +109,31 @@ class Fetcher:
         except Exception as e:
             logger.warning(f"Error during content expansion: {e}")
 
-    def _auto_scroll(self, page: Page):
+    def _auto_scroll(self, page: Page, max_scrolls: int = 10):
         """
         Scrolls down the page to trigger dynamic content loading.
         """
-        logger.debug("Starting auto-scroll...")
+        logger.debug(f"Starting auto-scroll (max {max_scrolls} scrolls)...")
         prev_height = -1
-        max_scrolls = 10  # Limit scrolls to avoid infinite loops on infinite feed
         scroll_count = 0
+        no_change_count = 0
 
         while scroll_count < max_scrolls:
             page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
             try:
-                page.wait_for_timeout(1000)  # Wait for content to load
+                page.wait_for_timeout(1500)  # Wait for content to load
             except Exception:
                 break
             
             new_height = page.evaluate("document.body.scrollHeight")
             if new_height == prev_height:
-                break
+                no_change_count += 1
+                if no_change_count >= 3:
+                    logger.debug("Scroll height stable, stopping.")
+                    break
+            else:
+                no_change_count = 0
+            
             prev_height = new_height
             scroll_count += 1
         

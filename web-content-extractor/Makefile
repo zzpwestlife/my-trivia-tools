@@ -19,6 +19,7 @@ help:
 	@echo "  make test            - Run unit tests"
 	@echo "  make clean           - Remove output directory and temporary files"
 	@echo "  make lint            - Run code linting (optional)"
+	@echo "  make docx            - Convert the latest Markdown file to DOCX"
 
 install:
 	$(PYTHON) -m venv $(VENV)
@@ -29,6 +30,15 @@ install:
 run:
 	@mkdir -p $(OUTPUT_DIR)
 	$(PY) main.py $(if $(URL),$(URL),$(DEFAULT_URL)) --output $(OUTPUT_DIR) --debug
+
+docx:
+	@file=$$(ls -t $(OUTPUT_DIR)/*.md | head -n 1); \
+	if [ -z "$$file" ]; then \
+		echo "No markdown files found in $(OUTPUT_DIR)"; \
+	else \
+		echo "Converting $$file to DOCX..."; \
+		$(PY) src/md_converter.py "$$file"; \
+	fi
 
 test:
 	$(PY) -m unittest discover tests

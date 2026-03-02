@@ -23,6 +23,81 @@ class Parser:
             if 'emoji' in src or 'twemoji' in src:
                 img.replace_with(alt if alt else "")
 
+    def parse_album_list(self, html: str) -> tuple[str, list]:
+        """
+        Parses a WeChat Album page to extract the album title and article list.
+        Returns: (album_title, list_of_articles)
+        Each article is a dict: {'title': str, 'url': str, 'date': str}
+        """
+        soup = BeautifulSoup(html, 'html.parser')
+        
+        # 1. Extract Album Title
+        album_title_elem = soup.find(class_="album__label-title")
+        if album_title_elem:
+            album_title = album_title_elem.get_text(strip=True)
+        else:
+            album_title = soup.title.string if soup.title else "Unknown Album"
+            
+        logger.info(f"Parsed Album Title: {album_title}")
+
+        # 2. Extract Articles
+        articles = []
+        # Find all list items
+        items = soup.find_all(class_="album__list-item")
+        
+        for i, item in enumerate(items):
+            # Extract Title
+            # Try specific classes first
+            title_elem = item.find(class_="album__item-title") or item.find(class_="js_album_item_title")
+            if title_elem:
+                title = title_elem.get_text(strip=True)
+            else:
+                # Fallback: look for any link text
+                link_elem = item.find("a")
+                title = link_elem.get_text(strip=True) if link_elem else f"Article {i+1}"
+            
+            # Fix duplication issue (e.g. "TitleTitle") if it occurs commonly
+            # Simple heuristic: if the string is exactly repeated twice, cut it in half
+            # But let's verify if that's actually the case. 
+            # In the analysis output: "从Prompt...①从Prompt...①"
+            # It seems the text is indeed duplicated.
+            # Let's try to find if there is a data attribute or just take the first child's text?
+            # Or use regex to check if string is composed of two identical halves
+            if len(title) > 0 and len(title) % 2 == 0:
+                mid = len(title) // 2
+                if title[:mid] == title[mid:]:
+                    title = title[:mid]
+            
+            # Extract URL
+            url = item.get('data-link')
+            if not url:
+                a_tag = item.find('a')
+                if a_tag:
+                    url = a_tag.get('href')
+            
+            # Ensure URL is absolute
+            if url and not url.startswith('http'):
+                # WeChat links are usually absolute, but just in case
+                pass
+            
+            # Extract Date (Create Time)
+            # Usually in .album__item-info -> .album__item-content-other -> span
+            date = ""
+            date_elem = item.find(class_="album__item-content-other")
+            if date_elem:
+                # usually matches "2024年1月1日" or similar
+                date = date_elem.get_text(strip=True)
+            
+            if title and url:
+                articles.append({
+                    'title': title,
+                    'url': url,
+                    'date': date
+                })
+        
+        logger.info(f"Found {len(articles)} articles in album.")
+        return album_title, articles
+
     def _parse_x_com(self, html: str, base_url: str) -> tuple[str, str]:
         """
         Custom parser for X.com/Twitter to bypass Readability limitations.
@@ -286,6 +361,91 @@ class Parser:
 
         return title, str(content_soup)
 
+    def _preprocess_wechat(self, html_content: str) -> str:
+        """
+        Specific preprocessing for WeChat articles.
+        - Fix lazy loading images (data-src -> src)
+        - Clean up manual bullets (•) in list items to avoid double bullets in markdown
+        - Clean up WeChat specific headers/sections
+        """
+        soup = BeautifulSoup(html_content, 'html.parser')
+        
+        # Fix lazy loaded images
+        for img in soup.find_all('img'):
+            if 'data-src' in img.attrs:
+                img['src'] = img['data-src']
+        
+        # Clean up list items that contain manual bullets
+        # WeChat often uses <li><section><span>• </span>...</section></li>
+        for li in soup.find_all('li'):
+            # Unwrap section and p tags inside li to avoid nested list issues in markdownify
+            for tag in li.find_all(['section', 'p']):
+                tag.unwrap()
+                
+            # Check for bullet characters at the start of the text content
+            text = li.get_text()
+            if text.strip().startswith('•') or text.strip().startswith('·'):
+                # We need to find the text node containing the bullet and remove it
+                # Recursively search for the first text node
+                def remove_bullet(element):
+                    if element.string and (element.string.strip().startswith('•') or element.string.strip().startswith('·')):
+                        element.string.replace_with(element.string.strip().lstrip('•').lstrip('·').strip())
+                        return True
+                    if hasattr(element, 'children'):
+                        for child in element.children:
+                            if remove_bullet(child):
+                                return True
+                    return False
+                
+                remove_bullet(li)
+
+        # Auto-link URLs in text
+        # Find text nodes that look like URLs and wrap them in <a> tags
+        import re
+        url_pattern = re.compile(r'(https?://[^\s<>"]+|www\.[^\s<>"]+)')
+        
+        # Iterate over all text nodes (simplified approach: just find all strings)
+        # We need to be careful not to break existing links
+        # A safer way is to find text nodes that are NOT inside <a> tags
+        for text_node in soup.find_all(string=True):
+            if text_node.parent.name == 'a' or text_node.parent.name == 'script' or text_node.parent.name == 'style':
+                continue
+            
+            if url_pattern.search(text_node):
+                # We found a URL in text. We need to replace this text node with a sequence of nodes
+                # (text, a, text, ...)
+                # However, modifying the tree while iterating is tricky.
+                # Let's try a simple regex replacement if the text node is just text
+                # But converting text node to HTML is hard with BS4 string replacement
+                # So we might skip this complex logic for now and rely on post-processing or just let it be.
+                # Actually, markdownify might not auto-link plain text.
+                # Let's try to wrap it in <> which markdownify might respect or convert to autolink.
+                # Or just leave it, standard markdown viewers often auto-link.
+                # But the user complained about "messy layout". Long URLs are messy.
+                # Converting to [Link](url) makes it cleaner if we truncate the text?
+                # No, just standard <url> is fine.
+                pass 
+                # Decided to skip auto-linking logic in BS4 for now to avoid breaking HTML structure
+                # unless we are sure.
+                
+        # Clean up "扩展方案" style headers
+        # Convert <h2 ...><span>扩展方案</span></h2> to clean <h2>扩展方案</h2>
+        # Actually markdownify handles h2 fine, but we might want to strip styles
+        for tag in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
+            # Remove inline styles that might cause issues (though readability usually strips them, let's be safe)
+            if 'style' in tag.attrs:
+                del tag['style']
+            # Clean up inner spans
+            for span in tag.find_all('span'):
+                span.unwrap()
+
+        # Remove empty paragraphs or sections that just contain spacing
+        for p in soup.find_all(['p', 'section']):
+            if not p.get_text(strip=True) and not p.find('img'):
+                p.decompose()
+
+        return str(soup)
+
     def parse_and_process(self, html_content: str, base_url: str) -> str:
         """
         Parses the HTML content, extracts the main article, processes images,
@@ -296,6 +456,78 @@ class Parser:
             if "x.com" in base_url or "twitter.com" in base_url:
                 return self._parse_x_com(html_content, base_url)
 
+            # Preprocess HTML for specific sites
+            if "mp.weixin.qq.com" in base_url:
+                logger.info("Detected WeChat article, applying WeChat-specific extraction...")
+                # Special handling for WeChat: directly extract #js_content to avoid Readability issues
+                soup = BeautifulSoup(html_content, 'html.parser')
+                content_div = soup.find(id="js_content")
+                if content_div:
+                    # Fix lazy loaded images in content_div
+                    for img in content_div.find_all('img'):
+                        if 'data-src' in img.attrs:
+                            img['src'] = img['data-src']
+                            # Remove data-src to avoid confusion
+                            del img['data-src']
+                            
+                    # Clean up list items that contain manual bullets
+                    for li in content_div.find_all('li'):
+                        # Unwrap section and p tags inside li
+                        for tag in li.find_all(['section', 'p']):
+                            tag.unwrap()
+                            
+                        # Check for bullet characters at the start of the text content
+                        text = li.get_text()
+                        if text.strip().startswith('•') or text.strip().startswith('·'):
+                            def remove_bullet(element):
+                                if element.string and (element.string.strip().startswith('•') or element.string.strip().startswith('·')):
+                                    element.string.replace_with(element.string.strip().lstrip('•').lstrip('·').strip())
+                                    return True
+                                if hasattr(element, 'children'):
+                                    for child in element.children:
+                                        if remove_bullet(child):
+                                            return True
+                                return False
+                            remove_bullet(li)
+
+                    # Remove empty paragraphs or sections
+                    for p in content_div.find_all(['p', 'section']):
+                        if not p.get_text(strip=True) and not p.find('img'):
+                            p.decompose()
+
+                    # Extract title separately as #js_content doesn't have it
+                    # WeChat title is usually in #activity-name
+                    title_elem = soup.find(id="activity-name")
+                    title = title_elem.get_text(strip=True) if title_elem else soup.title.string
+
+                    # Use content_div as our source
+                    soup = BeautifulSoup(str(content_div), 'html.parser')
+                    # Skip Readability entirely for WeChat
+                    cleaned_html = str(soup)
+                    
+                    # Process images using the standard logic below
+                    # (we need to re-find images in the new soup)
+                    images = soup.find_all('img')
+                    logger.info(f"Found {len(images)} images in WeChat content.")
+                    
+                    for img in images:
+                        src = img.get('src')
+                        if src:
+                            new_src = self.asset_manager.download_image(src, base_url)
+                            img['src'] = new_src
+                            # Remove unnecessary attributes
+                            for attr in ['width', 'height', 'style', 'class', 'data-type', 'data-ratio']:
+                                if attr in img.attrs: del img[attr]
+                    
+                    return title, str(soup)
+                
+                else:
+                    logger.warning("Could not find #js_content, falling back to standard Readability...")
+                    # Fallthrough to standard logic if #js_content is missing
+
+            # Initialize Readability Document
+            doc = Document(html_content)
+            
             # Preprocess HTML to fix specific site issues (like X.com images)
             title = doc.title()
             summary_html = doc.summary()
