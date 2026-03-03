@@ -79,5 +79,14 @@
     "enabled": true,
     "created_at": "2026-03-02T17:24:54.944260",
     "updated_at": "2026-03-02T17:24:54.944260"
+  },
+  {
+    "id": "76363aaf-03b9-4e64-8cde-0fc868b44292",
+    "name": "Youtube",
+    "url": "https://www.youtube.com",
+    "group_id": "cf62a043-cf94-44d3-ae79-b383e13d9857",
+    "enabled": true,
+    "created_at": "2026-03-03T09:23:13.111359",
+    "updated_at": "2026-03-03T09:23:13.111359"
   }
 ]

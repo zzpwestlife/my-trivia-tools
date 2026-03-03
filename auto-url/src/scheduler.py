@@ -47,7 +47,14 @@ class SchedulerService:
                 self._check_schedules()
             except Exception as e:
                 self.logger.error(f"Error in scheduler loop: {e}")
-            time.sleep(60)
+            
+            # Wait until the next minute starts to align execution
+            # This avoids missing a minute or checking multiple times in the same minute unnecessarily
+            # but for now, simple sleep is okay, but let's reduce to 10s to be more responsive
+            # or sleep until next minute 00 seconds
+            now = datetime.now()
+            sleep_seconds = 60 - now.second
+            time.sleep(sleep_seconds)
 
     def _check_schedules(self):
         now = datetime.now()

@@ -3,13 +3,13 @@
     "id": "e50432b0-6f1d-444f-8945-b2682dd2fb7b",
     "name": "Work Start",
     "url_ids": [
-      "4e5bc8a6-3025-4dab-a919-17cf085ac9c3",
-      "08e3fcf8-afaf-4b6f-9f0f-674d23459906",
       "83032e5e-4c40-47b2-8a41-f200ab021848",
-      "9601e7ae-2ada-40a7-b31d-36900249a620"
+      "9601e7ae-2ada-40a7-b31d-36900249a620",
+      "66e4bab4-80eb-495f-ad50-f3dcd4ecd0b4",
+      "56273b6b-2702-46f2-ae36-daf499416208"
     ],
-    "trigger_type": "daily",
-    "trigger_value": "09:30",
+    "trigger_type": "custom",
+    "trigger_value": "50 8 * * 1-5",
     "week_days": [
       "1",
       "2",
@@ -19,20 +19,21 @@
     ],
     "enabled": true,
     "last_executed": null,
-    "next_execution": "2026-03-03T09:30:00",
+    "next_execution": "2026-03-04T08:50:00",
     "created_at": "2026-03-03T08:46:40.051728",
-    "updated_at": "2026-03-03T08:46:40.051742"
+    "updated_at": "2026-03-03T09:24:48.734894"
   },
   {
     "id": "7e537bb3-81b4-41fa-b10d-783106797a02",
     "name": "Daily Reading",
     "url_ids": [
+      "76363aaf-03b9-4e64-8cde-0fc868b44292",
       "e71b043f-ce75-4996-875a-1a7a56706b77",
       "b40942a7-5e7f-45db-8170-9c8bd408c3b8",
       "826af3d5-0761-4d92-b923-b3ff364b48fc"
     ],
     "trigger_type": "daily",
-    "trigger_value": "08:30",
+    "trigger_value": "08:40",
     "week_days": [
       "1",
       "2",
@@ -41,17 +42,17 @@
       "5"
     ],
     "enabled": true,
-    "last_executed": null,
-    "next_execution": "2026-03-04T08:30:00",
+    "last_executed": "2026-03-03T09:18:00.850909",
+    "next_execution": "2026-03-04T08:40:00",
     "created_at": "2026-03-03T08:46:40.052100",
-    "updated_at": "2026-03-03T08:46:40.052115"
+    "updated_at": "2026-03-03T09:24:48.735123"
   },
   {
     "id": "4303f38d-2cec-4cfa-b7fd-15822de0a502",
     "name": "Weekly Review",
     "url_ids": [
-      "66e4bab4-80eb-495f-ad50-f3dcd4ecd0b4",
-      "56273b6b-2702-46f2-ae36-daf499416208"
+      "83032e5e-4c40-47b2-8a41-f200ab021848",
+      "9601e7ae-2ada-40a7-b31d-36900249a620"
     ],
     "trigger_type": "weekly",
     "trigger_value": "17:00",
@@ -62,6 +63,6 @@
     "last_executed": null,
     "next_execution": null,
     "created_at": "2026-03-03T08:46:40.052230",
-    "updated_at": "2026-03-03T09:00:17.476692"
+    "updated_at": "2026-03-03T09:27:00.982714"
   }
 ]

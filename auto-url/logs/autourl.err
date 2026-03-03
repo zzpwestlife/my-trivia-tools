@@ -35,3 +35,62 @@
 2026-03-03 08:58:17,326 - StorageService - INFO - Updated schedule: Weekly Review
 2026-03-03 08:59:17,403 - StorageService - INFO - Updated schedule: Weekly Review
 2026-03-03 09:00:17,478 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:01:17,557 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:02:17,633 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:03:17,708 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:04:17,783 - StorageService - INFO - Updated schedule: Weekly Review
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 09:05:03,150 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 09:05:03,151 - SchedulerService - INFO - Scheduler started
+2026-03-03 09:05:03,151 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:06:00,210 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:07:00,286 - StorageService - INFO - Updated schedule: Weekly Review
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 09:07:28,337 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 09:07:28,338 - SchedulerService - INFO - Scheduler started
+2026-03-03 09:07:28,338 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:08:00,388 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:09:00,461 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:10:00,513 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:11:00,586 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:12:00,668 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:13:00,741 - StorageService - INFO - Updated schedule: Weekly Review
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 09:15:21,639 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 09:15:21,641 - StorageService - INFO - Updated schedule: Work Start
+2026-03-03 09:15:21,641 - StorageService - INFO - Updated schedule: Daily Reading
+2026-03-03 09:15:21,642 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:15:21,642 - SchedulerService - INFO - Scheduler started
+2026-03-03 09:15:21,642 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:16:00,697 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:17:00,776 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:18:00,851 - SchedulerService - INFO - Executing schedule: Daily Reading
+2026-03-03 09:18:00,939 - URLLauncherService - INFO - Opened URL: https://book.xuezhu.wang/ai-news/
+2026-03-03 09:18:01,570 - URLLauncherService - INFO - Opened URL: https://futu.feishu.cn/wiki/F5T8wOgDEidn56k4Akncd3pCnoe
+2026-03-03 09:18:02,194 - URLLauncherService - INFO - Opened URL: https://wx.zsxq.com/group/48885585482828
+2026-03-03 09:18:02,767 - URLLauncherService - INFO - Opened 3 URLs
+2026-03-03 09:18:02,994 - StorageService - INFO - Updated schedule: Daily Reading
+2026-03-03 09:18:02,995 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:19:01,074 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:20:00,150 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:21:00,225 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:22:00,290 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:23:00,370 - StorageService - INFO - Updated schedule: Weekly Review
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 09:23:13,245 - StorageService - INFO - Loaded 10 URLs, 2 groups, 3 schedules
+2026-03-03 09:23:13,247 - StorageService - INFO - Updated schedule: Work Start
+2026-03-03 09:23:13,248 - StorageService - INFO - Updated schedule: Daily Reading
+2026-03-03 09:23:13,248 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:23:13,248 - SchedulerService - INFO - Scheduler started
+2026-03-03 09:23:13,248 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:24:00,272 - StorageService - INFO - Updated schedule: Weekly Review
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 09:24:48,732 - StorageService - INFO - Loaded 10 URLs, 2 groups, 3 schedules
+2026-03-03 09:24:48,735 - StorageService - INFO - Updated schedule: Work Start
+2026-03-03 09:24:48,735 - StorageService - INFO - Updated schedule: Daily Reading
+2026-03-03 09:24:48,735 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:24:48,735 - SchedulerService - INFO - Scheduler started
+2026-03-03 09:24:48,735 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:25:00,811 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:26:00,904 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:27:00,983 - StorageService - INFO - Updated schedule: Weekly Review

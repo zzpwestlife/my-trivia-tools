@@ -22,6 +22,7 @@ def load_config(config_path: str = "config.json", force_reload: bool = False):
         config = json.load(f)
 
     name_to_url_id = {}
+    alias_map = {}
     updated_count = 0
     added_count = 0
 
@@ -64,11 +65,24 @@ def load_config(config_path: str = "config.json", force_reload: bool = False):
             added_count += 1
 
         name_to_url_id[url.name] = url.id
+        if 'alias' in u:
+            alias_map[u['alias']] = url.id
+        else:
+            alias_map[url.name] = url.id
 
     schedules = config.get('schedules', [])
     for s in schedules:
-        url_names = s.get('url_names', [])
-        url_ids = [name_to_url_id.get(name) for name in url_names if name in name_to_url_id]
+        # Support both 'alias' (preferred) and 'url_names' (legacy)
+        target_names = s.get('alias') or s.get('url_names', [])
+        
+        url_ids = []
+        for name in target_names:
+            if name in alias_map:
+                url_ids.append(alias_map[name])
+            elif name in name_to_url_id:
+                url_ids.append(name_to_url_id[name])
+            else:
+                print(f"警告: 计划 '{s['name']}' 中的网址(或别名) '{name}' 未找到定义")
 
         if not url_ids:
             print(f"警告: 计划 '{s['name']}' 没有有效的网址，跳过")
@@ -76,7 +90,15 @@ def load_config(config_path: str = "config.json", force_reload: bool = False):
 
         trigger_value = s.get('time') or s.get('cron') or s.get('date', '09:00')
         week_days_str = s.get('days', '1,2,3,4,5')
-        week_days = week_days_str.split(',') if week_days_str else [1,2,3,4,5]
+        
+        week_days = [1,2,3,4,5] # Default
+        if week_days_str:
+             if isinstance(week_days_str, str):
+                 week_days = week_days_str.split(',')
+             elif isinstance(week_days_str, list):
+                 week_days = week_days_str
+             else:
+                 week_days = str(week_days_str).split(',')
 
         schedule = Schedule.create(
             name=s['name'],
@@ -89,16 +111,23 @@ def load_config(config_path: str = "config.json", force_reload: bool = False):
 
         existing = [sc for sc in storage.schedules if sc.name == schedule.name]
         if existing:
+            # Only update fields that are explicitly set or calculated
             existing[0].url_ids = schedule.url_ids
             existing[0].trigger_type = schedule.trigger_type
             existing[0].trigger_value = schedule.trigger_value
             existing[0].week_days = schedule.week_days
             existing[0].enabled = schedule.enabled
-            print(f"更新计划: {schedule.name}")
+            
+            # Re-calculate next execution because time/type might have changed
+            existing[0].calculate_next_execution()
+            storage.update_schedule(existing[0])
+            
+            print(f"更新计划: {schedule.name} (下次执行: {existing[0].next_execution})")
             updated_count += 1
         else:
+            schedule.calculate_next_execution()
             storage.add_schedule(schedule)
-            print(f"添加计划: {schedule.name}")
+            print(f"添加计划: {schedule.name} (下次执行: {schedule.next_execution})")
             added_count += 1
 
     print(f"\n配置导入完成! 新增: {added_count}, 更新: {updated_count}")
