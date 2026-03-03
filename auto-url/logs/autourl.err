@@ -1,0 +1,37 @@
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 08:45:29,751 - StorageService - INFO - Loaded 9 URLs, 2 groups, 1 schedules
+2026-03-03 08:45:29,752 - SchedulerService - INFO - Scheduler started
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 08:52:18,111 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:52:18,112 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:52:18,112 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:52:18,112 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:53:18,189 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:53:18,189 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 08:53:38,786 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:53:38,787 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:53:38,788 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:53:38,788 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 08:53:46,347 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:53:46,348 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:53:46,348 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:53:46,348 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:54:46,393 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:54:46,394 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:55:46,465 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:55:46,466 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 08:56:25,667 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:56:25,669 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:56:25,669 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:56:25,669 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:57:25,752 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:57:25,756 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+/Applications/ServBay/script/alias/python3: line 306: local: can only be used in a function
+2026-03-03 08:58:17,324 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:58:17,326 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:58:17,326 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:59:17,403 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:00:17,478 - StorageService - INFO - Updated schedule: Weekly Review

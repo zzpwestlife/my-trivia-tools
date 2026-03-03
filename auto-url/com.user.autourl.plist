@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.autourl</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Applications/ServBay/script/alias/python3</string>
+        <string>/Users/admin/openSource/my-trivia-tools/auto-url/autourl.py</string>
+        <string>start</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>WorkingDirectory</key>
+    <string>/Users/admin/openSource/my-trivia-tools/auto-url</string>
+    <key>StandardOutPath</key>
+    <string>/Users/admin/openSource/my-trivia-tools/auto-url/logs/autourl.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/admin/openSource/my-trivia-tools/auto-url/logs/autourl.err</string>
+</dict>
+</plist>

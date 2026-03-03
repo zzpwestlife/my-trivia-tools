@@ -1,0 +1,84 @@
+{
+  "urls": [
+    {
+      "name": "Google",
+      "url": "https://www.google.com",
+      "enabled": true,
+      "group": "work"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "enabled": true
+    },
+    {
+      "name": "精选日报",
+      "url": "https://book.xuezhu.wang/ai-news/",
+      "enabled": true
+    },
+    {
+      "name": "我的 AI 记录",
+      "url": "https://futu.feishu.cn/wiki/F5T8wOgDEidn56k4Akncd3pCnoe",
+      "enabled": true
+    },
+    {
+      "name": "工作服务链接",
+      "url": "https://futu.feishu.cn/sheets/Dtfus2wfohzBGytHZaAcFT17nge",
+      "enabled": true
+    },
+    {
+      "name": "Get 笔记",
+      "url": "https://www.biji.com/note",
+      "enabled": true
+    },
+    {
+      "name": "知识星球",
+      "url": "https://wx.zsxq.com/group/48885585482828",
+      "enabled": true
+    },
+    {
+      "name": "Futu 飞书",
+      "url": "https://futu.feishu.cn/drive/home/",
+      "enabled": true
+    },
+    {
+      "name": "Futu 飞书 项目",
+      "url": "https://project.feishu.cn/workbench",
+      "enabled": true
+    }
+  ],
+  "groups": [
+    {
+      "name": "work",
+      "color": "#007AFF"
+    },
+    {
+      "name": "personal",
+      "color": "#34C759"
+    }
+  ],
+  "schedules": [
+    {
+      "name": "Work Start",
+      "url_names": ["Google", "GitHub", "Futu 飞书", "Futu 飞书 项目"],
+      "type": "custom",
+      "cron": "55 8 * * 1-5",
+      "enabled": true
+    },
+    {
+      "name": "Daily Reading",
+      "url_names": ["精选日报", "知识星球", "我的 AI 记录"],
+      "type": "daily",
+      "time": "09:00",
+      "enabled": true
+    },
+    {
+      "name": "Weekly Review",
+      "url_names": ["工作服务链接", "Get 笔记"],
+      "type": "weekly",
+      "time": "17:00",
+      "days": "5",
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "4e5bc8a6-3025-4dab-a919-17cf085ac9c3",
+    "name": "Google",
+    "url": "https://www.google.com",
+    "group_id": "cf62a043-cf94-44d3-ae79-b383e13d9857",
+    "enabled": true,
+    "created_at": "2026-03-02T14:52:02.800911",
+    "updated_at": "2026-03-02T14:52:02.800911"
+  },
+  {
+    "id": "08e3fcf8-afaf-4b6f-9f0f-674d23459906",
+    "name": "GitHub",
+    "url": "https://github.com",
+    "group_id": null,
+    "enabled": true,
+    "created_at": "2026-03-02T14:52:02.801023",
+    "updated_at": "2026-03-02T14:52:02.801023"
+  },
+  {
+    "id": "e71b043f-ce75-4996-875a-1a7a56706b77",
+    "name": "精选日报",
+    "url": "https://book.xuezhu.wang/ai-news/",
+    "group_id": null,
+    "enabled": true,
+    "created_at": "2026-03-02T14:52:02.801126",
+    "updated_at": "2026-03-02T14:52:02.801126"
+  },
+  {
+    "id": "826af3d5-0761-4d92-b923-b3ff364b48fc",
+    "name": "我的 AI 记录",
+    "url": "https://futu.feishu.cn/wiki/F5T8wOgDEidn56k4Akncd3pCnoe",
+    "group_id": null,
+    "enabled": true,
+    "created_at": "2026-03-02T17:22:23.864888",
+    "updated_at": "2026-03-02T17:22:23.864888"
+  },
+  {
+    "id": "66e4bab4-80eb-495f-ad50-f3dcd4ecd0b4",
+    "name": "工作服务链接",
+    "url": "https://futu.feishu.cn/sheets/Dtfus2wfohzBGytHZaAcFT17nge",
+    "group_id": null,
+    "enabled": true,
+    "created_at": "2026-03-02T17:24:54.943765",
+    "updated_at": "2026-03-02T17:24:54.943765"
+  },
+  {
+    "id": "56273b6b-2702-46f2-ae36-daf499416208",
+    "name": "Get 笔记",
+    "url": "https://www.biji.com/note",
+    "group_id": null,
+    "enabled": true,
+    "created_at": "2026-03-02T17:24:54.943947",
+    "updated_at": "2026-03-02T17:24:54.943947"
+  },
+  {
+    "id": "b40942a7-5e7f-45db-8170-9c8bd408c3b8",
+    "name": "知识星球",
+    "url": "https://wx.zsxq.com/group/48885585482828",
+    "group_id": null,
+    "enabled": true,
+    "created_at": "2026-03-02T17:24:54.944061",
+    "updated_at": "2026-03-02T17:24:54.944061"
+  },
+  {
+    "id": "83032e5e-4c40-47b2-8a41-f200ab021848",
+    "name": "Futu 飞书",
+    "url": "https://futu.feishu.cn/drive/home/",
+    "group_id": null,
+    "enabled": true,
+    "created_at": "2026-03-02T17:24:54.944162",
+    "updated_at": "2026-03-02T17:24:54.944162"
+  },
+  {
+    "id": "9601e7ae-2ada-40a7-b31d-36900249a620",
+    "name": "Futu 飞书 项目",
+    "url": "https://project.feishu.cn/workbench",
+    "group_id": null,
+    "enabled": true,
+    "created_at": "2026-03-02T17:24:54.944260",
+    "updated_at": "2026-03-02T17:24:54.944260"
+  }
+]

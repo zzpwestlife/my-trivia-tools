@@ -5,4 +5,3 @@ __pycache__/
 .DS_Store
 web-content-extractor/output/
 web-content-extractor/test_output/
-auto-url/

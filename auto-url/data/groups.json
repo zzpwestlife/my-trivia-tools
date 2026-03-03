@@ -1,0 +1,14 @@
+[
+  {
+    "id": "cf62a043-cf94-44d3-ae79-b383e13d9857",
+    "name": "work",
+    "color_hex": "#007AFF",
+    "created_at": "2026-03-02T14:52:02.800570"
+  },
+  {
+    "id": "f367c75d-12b1-443d-a8e3-b06809458da4",
+    "name": "personal",
+    "color_hex": "#34C759",
+    "created_at": "2026-03-02T14:52:02.800797"
+  }
+]

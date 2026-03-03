@@ -1,0 +1,156 @@
+2026-03-02 14:20:09,706 - StorageService - INFO - Loaded 0 URLs, 0 groups, 0 schedules
+2026-03-02 14:20:09,706 - StorageService - INFO - Added URL: Google
+2026-03-02 14:20:15,275 - StorageService - INFO - Loaded 1 URLs, 0 groups, 0 schedules
+2026-03-02 14:20:22,186 - StorageService - INFO - Loaded 1 URLs, 0 groups, 0 schedules
+2026-03-02 14:20:22,187 - StorageService - INFO - Added URL: GitHub
+2026-03-02 14:20:22,319 - StorageService - INFO - Loaded 2 URLs, 0 groups, 0 schedules
+2026-03-02 14:20:22,320 - StorageService - INFO - Added URL: Bing
+2026-03-02 14:20:27,933 - StorageService - INFO - Loaded 3 URLs, 0 groups, 0 schedules
+2026-03-02 14:20:27,933 - StorageService - INFO - Added schedule: Morning
+2026-03-02 14:20:32,863 - StorageService - INFO - Loaded 3 URLs, 0 groups, 1 schedules
+2026-03-02 14:29:44,656 - StorageService - INFO - Loaded 3 URLs, 0 groups, 1 schedules
+2026-03-02 14:29:44,656 - StorageService - INFO - Added URL: 今日头条
+2026-03-02 14:29:52,167 - StorageService - INFO - Loaded 4 URLs, 0 groups, 1 schedules
+2026-03-02 14:31:45,282 - StorageService - INFO - Loaded 4 URLs, 0 groups, 1 schedules
+2026-03-02 14:31:45,446 - URLLauncherService - INFO - Opened URL: https://www.google.com
+2026-03-02 14:31:46,021 - URLLauncherService - INFO - Opened URL: https://github.com
+2026-03-02 14:31:46,573 - URLLauncherService - INFO - Opened URL: https://www.bing.com
+2026-03-02 14:31:47,185 - URLLauncherService - INFO - Opened URL: https://www.toutiao.com
+2026-03-02 14:31:47,687 - URLLauncherService - INFO - Opened 4 URLs
+2026-03-02 14:33:18,747 - StorageService - INFO - Loaded 4 URLs, 0 groups, 1 schedules
+2026-03-02 14:33:59,869 - StorageService - INFO - Loaded 4 URLs, 0 groups, 1 schedules
+2026-03-02 14:43:17,272 - StorageService - INFO - Loaded 0 URLs, 0 groups, 0 schedules
+2026-03-02 14:43:17,273 - StorageService - INFO - Added group: work
+2026-03-02 14:43:17,273 - StorageService - INFO - Added group: personal
+2026-03-02 14:43:17,273 - StorageService - INFO - Added URL: Google
+2026-03-02 14:43:17,273 - StorageService - INFO - Added URL: GitHub
+2026-03-02 14:43:17,273 - StorageService - INFO - Added URL: Bing
+2026-03-02 14:43:17,273 - StorageService - INFO - Added schedule: Morning
+2026-03-02 14:43:23,214 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 14:43:23,295 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 14:48:14,691 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 14:48:21,507 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 14:48:25,462 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 14:48:25,586 - URLLauncherService - INFO - Opened URL: https://www.google.com
+2026-03-02 14:48:26,153 - URLLauncherService - INFO - Opened URL: https://github.com
+2026-03-02 14:48:26,715 - URLLauncherService - INFO - Opened URL: https://www.bing.com
+2026-03-02 14:48:27,217 - URLLauncherService - INFO - Opened 3 URLs
+2026-03-02 14:48:32,114 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 14:48:32,115 - SchedulerService - INFO - Scheduler started
+2026-03-02 14:50:50,076 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 14:50:50,254 - URLLauncherService - INFO - Opened URL: https://www.google.com
+2026-03-02 14:50:50,808 - URLLauncherService - INFO - Opened URL: https://github.com
+2026-03-02 14:50:51,408 - URLLauncherService - INFO - Opened URL: https://www.bing.com
+2026-03-02 14:50:51,913 - URLLauncherService - INFO - Opened 3 URLs
+2026-03-02 14:51:28,503 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 14:51:28,599 - URLLauncherService - INFO - Opened URL: https://www.google.com
+2026-03-02 14:51:29,152 - URLLauncherService - INFO - Opened URL: https://github.com
+2026-03-02 14:51:29,711 - URLLauncherService - INFO - Opened URL: https://www.bing.com
+2026-03-02 14:51:30,215 - URLLauncherService - INFO - Opened 3 URLs
+2026-03-02 14:52:02,799 - StorageService - INFO - Loaded 0 URLs, 0 groups, 0 schedules
+2026-03-02 14:52:02,800 - StorageService - INFO - Added group: work
+2026-03-02 14:52:02,800 - StorageService - INFO - Added group: personal
+2026-03-02 14:52:02,801 - StorageService - INFO - Added URL: Google
+2026-03-02 14:52:02,801 - StorageService - INFO - Added URL: GitHub
+2026-03-02 14:52:02,801 - StorageService - INFO - Added URL: 精选日报
+2026-03-02 14:52:02,801 - StorageService - INFO - Added schedule: Morning
+2026-03-02 14:52:08,323 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 14:53:17,604 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 17:19:27,920 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 17:21:11,683 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 17:21:11,748 - URLLauncherService - INFO - Opened URL: https://www.google.com
+2026-03-02 17:21:12,298 - URLLauncherService - INFO - Opened URL: https://github.com
+2026-03-02 17:21:12,847 - URLLauncherService - INFO - Opened URL: https://book.xuezhu.wang/ai-news/
+2026-03-02 17:21:13,351 - URLLauncherService - INFO - Opened 3 URLs
+2026-03-02 17:22:23,864 - StorageService - INFO - Loaded 3 URLs, 2 groups, 1 schedules
+2026-03-02 17:22:23,865 - StorageService - INFO - Added URL: 我的 AI 记录
+2026-03-02 17:22:23,952 - URLLauncherService - INFO - Opened URL: https://www.google.com
+2026-03-02 17:22:24,514 - URLLauncherService - INFO - Opened URL: https://github.com
+2026-03-02 17:22:25,068 - URLLauncherService - INFO - Opened URL: https://book.xuezhu.wang/ai-news/
+2026-03-02 17:22:25,630 - URLLauncherService - INFO - Opened URL: https://futu.feishu.cn/wiki/F5T8wOgDEidn56k4Akncd3pCnoe
+2026-03-02 17:22:26,131 - URLLauncherService - INFO - Opened 4 URLs
+2026-03-02 17:24:54,943 - StorageService - INFO - Loaded 4 URLs, 2 groups, 1 schedules
+2026-03-02 17:24:54,943 - StorageService - INFO - Added URL: 工作服务链接
+2026-03-02 17:24:54,944 - StorageService - INFO - Added URL: Get 笔记
+2026-03-02 17:24:54,944 - StorageService - INFO - Added URL: 知识星球
+2026-03-02 17:24:54,944 - StorageService - INFO - Added URL: Futu 飞书
+2026-03-02 17:24:54,944 - StorageService - INFO - Added URL: Futu 飞书 项目
+2026-03-02 17:24:55,017 - URLLauncherService - INFO - Opened URL: https://www.google.com
+2026-03-02 17:24:55,573 - URLLauncherService - INFO - Opened URL: https://github.com
+2026-03-02 17:24:56,131 - URLLauncherService - INFO - Opened URL: https://book.xuezhu.wang/ai-news/
+2026-03-02 17:24:56,739 - URLLauncherService - INFO - Opened URL: https://futu.feishu.cn/wiki/F5T8wOgDEidn56k4Akncd3pCnoe
+2026-03-02 17:24:57,333 - URLLauncherService - INFO - Opened URL: https://futu.feishu.cn/sheets/Dtfus2wfohzBGytHZaAcFT17nge
+2026-03-02 17:24:57,903 - URLLauncherService - INFO - Opened URL: https://www.biji.com/note
+2026-03-02 17:24:58,522 - URLLauncherService - INFO - Opened URL: https://wx.zsxq.com/group/48885585482828
+2026-03-02 17:24:59,148 - URLLauncherService - INFO - Opened URL: https://futu.feishu.cn/drive/home/
+2026-03-02 17:25:00,099 - URLLauncherService - INFO - Opened URL: https://project.feishu.cn/workbench
+2026-03-02 17:25:00,605 - URLLauncherService - INFO - Opened 9 URLs
+2026-03-02 17:26:21,255 - StorageService - INFO - Loaded 9 URLs, 2 groups, 1 schedules
+2026-03-02 17:26:23,636 - URLLauncherService - ERROR - Failed to open URL https://www.google.com: Command '['osascript', '-e', '\n                    tell application "Safari"\n                        activate\n                        make new window\n                        set URL of front window to "https://www.google.com"\n                    end tell\n                    ']' returned non-zero exit status 1.
+2026-03-02 17:26:24,321 - URLLauncherService - ERROR - Failed to open URL https://github.com: Command '['osascript', '-e', '\n                    tell application "Safari"\n                        activate\n                        make new window\n                        set URL of front window to "https://github.com"\n                    end tell\n                    ']' returned non-zero exit status 1.
+2026-03-02 17:26:24,952 - URLLauncherService - ERROR - Failed to open URL https://book.xuezhu.wang/ai-news/: Command '['osascript', '-e', '\n                    tell application "Safari"\n                        activate\n                        make new window\n                        set URL of front window to "https://book.xuezhu.wang/ai-news/"\n                    end tell\n                    ']' returned non-zero exit status 1.
+2026-03-02 17:26:25,596 - URLLauncherService - ERROR - Failed to open URL https://futu.feishu.cn/wiki/F5T8wOgDEidn56k4Akncd3pCnoe: Command '['osascript', '-e', '\n                    tell application "Safari"\n                        activate\n                        make new window\n                        set URL of front window to "https://futu.feishu.cn/wiki/F5T8wOgDEidn56k4Akncd3pCnoe"\n                    end tell\n                    ']' returned non-zero exit status 1.
+2026-03-02 17:26:26,253 - URLLauncherService - ERROR - Failed to open URL https://futu.feishu.cn/sheets/Dtfus2wfohzBGytHZaAcFT17nge: Command '['osascript', '-e', '\n                    tell application "Safari"\n                        activate\n                        make new window\n                        set URL of front window to "https://futu.feishu.cn/sheets/Dtfus2wfohzBGytHZaAcFT17nge"\n                    end tell\n                    ']' returned non-zero exit status 1.
+2026-03-02 17:26:26,908 - URLLauncherService - ERROR - Failed to open URL https://www.biji.com/note: Command '['osascript', '-e', '\n                    tell application "Safari"\n                        activate\n                        make new window\n                        set URL of front window to "https://www.biji.com/note"\n                    end tell\n                    ']' returned non-zero exit status 1.
+2026-03-02 17:26:27,602 - URLLauncherService - ERROR - Failed to open URL https://wx.zsxq.com/group/48885585482828: Command '['osascript', '-e', '\n                    tell application "Safari"\n                        activate\n                        make new window\n                        set URL of front window to "https://wx.zsxq.com/group/48885585482828"\n                    end tell\n                    ']' returned non-zero exit status 1.
+2026-03-02 17:26:28,223 - URLLauncherService - ERROR - Failed to open URL https://futu.feishu.cn/drive/home/: Command '['osascript', '-e', '\n                    tell application "Safari"\n                        activate\n                        make new window\n                        set URL of front window to "https://futu.feishu.cn/drive/home/"\n                    end tell\n                    ']' returned non-zero exit status 1.
+2026-03-02 17:26:28,884 - URLLauncherService - ERROR - Failed to open URL https://project.feishu.cn/workbench: Command '['osascript', '-e', '\n                    tell application "Safari"\n                        activate\n                        make new window\n                        set URL of front window to "https://project.feishu.cn/workbench"\n                    end tell\n                    ']' returned non-zero exit status 1.
+2026-03-02 17:26:29,388 - URLLauncherService - INFO - Opened 9 URLs
+2026-03-02 17:26:55,455 - StorageService - INFO - Loaded 9 URLs, 2 groups, 1 schedules
+2026-03-02 17:26:55,514 - URLLauncherService - INFO - Opened URL: https://www.google.com
+2026-03-02 17:26:56,078 - URLLauncherService - INFO - Opened URL: https://github.com
+2026-03-02 17:26:56,643 - URLLauncherService - INFO - Opened URL: https://book.xuezhu.wang/ai-news/
+2026-03-02 17:26:57,232 - URLLauncherService - INFO - Opened URL: https://futu.feishu.cn/wiki/F5T8wOgDEidn56k4Akncd3pCnoe
+2026-03-02 17:26:57,979 - URLLauncherService - INFO - Opened URL: https://futu.feishu.cn/sheets/Dtfus2wfohzBGytHZaAcFT17nge
+2026-03-02 17:26:58,591 - URLLauncherService - INFO - Opened URL: https://www.biji.com/note
+2026-03-02 17:26:59,195 - URLLauncherService - INFO - Opened URL: https://wx.zsxq.com/group/48885585482828
+2026-03-02 17:26:59,819 - URLLauncherService - INFO - Opened URL: https://futu.feishu.cn/drive/home/
+2026-03-02 17:27:00,565 - URLLauncherService - INFO - Opened URL: https://project.feishu.cn/workbench
+2026-03-02 17:27:01,067 - URLLauncherService - INFO - Opened 9 URLs
+2026-03-03 08:45:29,751 - StorageService - INFO - Loaded 9 URLs, 2 groups, 1 schedules
+2026-03-03 08:45:29,752 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:46:40,051 - StorageService - INFO - Loaded 9 URLs, 2 groups, 1 schedules
+2026-03-03 08:46:40,052 - StorageService - INFO - Added schedule: Work Start
+2026-03-03 08:46:40,052 - StorageService - INFO - Added schedule: Daily Reading
+2026-03-03 08:46:40,052 - StorageService - INFO - Added schedule: Weekly Review
+2026-03-03 08:46:40,119 - StorageService - INFO - Loaded 9 URLs, 2 groups, 4 schedules
+2026-03-03 08:47:04,542 - StorageService - INFO - Loaded 9 URLs, 2 groups, 4 schedules
+2026-03-03 08:47:04,543 - StorageService - INFO - Deleted schedule: c4686b70
+2026-03-03 08:47:04,612 - StorageService - INFO - Loaded 9 URLs, 2 groups, 4 schedules
+2026-03-03 08:49:41,649 - StorageService - INFO - Loaded 9 URLs, 2 groups, 4 schedules
+2026-03-03 08:49:41,654 - StorageService - INFO - Deleted schedule: c4686b70-be46-4c0a-b653-62ac70025944
+2026-03-03 08:49:41,723 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:52:18,000 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:52:18,111 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:52:18,112 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:52:18,112 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:52:18,112 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:53:18,189 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:53:18,189 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:53:38,681 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:53:38,786 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:53:38,787 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:53:38,788 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:53:38,788 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:53:46,247 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:53:46,347 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:53:46,348 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:53:46,348 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:53:46,348 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:54:46,393 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:54:46,394 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:55:46,465 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:55:46,466 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:56:04,915 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:56:25,667 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:56:25,669 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:56:25,669 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:56:25,669 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:57:25,752 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:57:25,756 - SchedulerService - ERROR - Error checking schedule Weekly Review: fromisoformat: argument must be str
+2026-03-03 08:57:56,400 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:58:17,324 - StorageService - INFO - Loaded 9 URLs, 2 groups, 3 schedules
+2026-03-03 08:58:17,326 - SchedulerService - INFO - Scheduler started
+2026-03-03 08:58:17,326 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 08:59:17,403 - StorageService - INFO - Updated schedule: Weekly Review
+2026-03-03 09:00:17,478 - StorageService - INFO - Updated schedule: Weekly Review
